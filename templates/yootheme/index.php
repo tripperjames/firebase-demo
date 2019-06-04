@@ -45,52 +45,7 @@ if ($site['layout'] == 'boxed') {
 
     $attrs_page['class'][] = $site['boxed.alignment'] ? 'uk-margin-auto' : '';
     $attrs_page['class'][] = $site['boxed.margin_top'] ? 'tm-page-margin-top' : '';
-    $attrs_page['class'][] = $site['boxed.margin_bottom'] ? 'tm-page-margin-bottom' : '';
-    $attrs_page_container['class'][] = 'tm-page-container uk-clearfix';
-
-    // Image
-    if ($site['boxed.media']) {
-   
-        $attrs_image = $theme->app['view']->bgImage($site['boxed.media'], [
-            'width' => $site['image_width'],
-            'height' => $site['image_height'],
-            'size' => $site['image_size'],
-            'position' => $site['image_position'],
-            'visibility' => $site['image_visibility'],
-            'blend_mode' => $site['media_blend_mode'],
-            'background' => $site['media_background'],
-            'effect' => $site['image_effect'],
-            'parallax_bgx_start' => $site['image_parallax_bgx_start'],
-            'parallax_bgy_start' => $site['image_parallax_bgy_start'],
-            'parallax_bgx_end' => $site['image_parallax_bgx_end'],
-            'parallax_bgy_end' => $site['image_parallax_bgy_end'],
-            'parallax_breakpoint' => $site['image_parallax_breakpoint'],
-            'parallax_target' => 'body',
-        ]);
-
-        if ($site['image_effect']) {
-            $attrs_image['class'][] = 'uk-position-cover uk-position-fixed';
-        } else {
-            $attrs_page_container = array_merge_recursive($attrs_page_container, $attrs_image);
-            $attrs_image = [];
-        }
-
-        // Overlay
-        if ($site['media_overlay']) {
-            $attrs_page_container['class'][] = 'uk-position-relative';
-            $attrs_media_overlay['class'][] = 'uk-position-cover';
-            $attrs_media_overlay['style'] = "background-color: {$site['media_overlay']};";
-        }
-
-    }
-
-}
-
-// Main section
-$attrs_main_section = [];
-$attrs_main_section['class'][] = 'tm-main uk-section uk-section-default';
-$attrs_main_section['class'][] = $view == 'blog' && $blog_settings['padding'] ? "uk-section-{$blog_settings['padding']}" : '';
-$attrs_main_section['class'][] = $view == 'post' && $post_settings['padding'] ? "uk-section-{$post_settings['padding']}" : '';
+    $attrs_page['class'][] = $site['boxed.margin_bottom'] ? 'tm-page-margin-bottom' : ion['class'][] = $view == 'post' && $post_settings['padding'] ? "uk-section-{$post_settings['padding']}" : '';
 $attrs_main_section['class'][] = $view == 'post' && $post_settings['padding_remove'] ? 'uk-padding-remove-top' : '';
 
 // Main container
