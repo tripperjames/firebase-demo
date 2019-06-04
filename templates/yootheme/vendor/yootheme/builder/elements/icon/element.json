@@ -1,0 +1,147 @@
+{
+    "name": "icon",
+    "title": "Icon",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "width": 500,
+    "defaults": {
+        "icon": "star",
+        "icon_ratio": 3,
+        "margin": "default"
+    },
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "fields": {
+        "icon": {
+            "label": "Icon",
+            "description": "Click on the pencil to pick an icon from the SVG gallery.",
+            "type": "icon"
+        },
+        "link": "${builder:link}",
+        "link_target": "${builder:link_target}",
+        "icon_color": {
+            "label": "Color",
+            "description": "Select the icon's color.",
+            "type": "select",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Muted": "muted",
+                "Emphasis": "emphasis",
+                "Primary": "primary",
+                "Success": "success",
+                "Warning": "warning",
+                "Danger": "danger"
+            },
+            "enable": "!link"
+        },
+        "icon_ratio": {
+            "label": "Size",
+            "description": "Enter a size ratio, if you want the icon to appear larger than the default font size, for example 1.5 or 2 to double the size.",
+            "attrs": {
+                "placeholder": "1"
+            },
+            "enable": "link_style != 'button'"
+        },
+        "link_style": {
+            "label": "Style",
+            "description": "Set the link style.",
+            "type": "select",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Button": "button",
+                "Link": "link",
+                "Link Muted": "muted",
+                "Link Text": "text",
+                "Link Reset": "reset"
+            },
+            "enable": "link"
+        },
+        "text_align": "${builder:text_align}",
+        "text_align_breakpoint": "${builder:text_align_breakpoint}",
+        "text_align_fallback": "${builder:text_align_fallback}",
+        "maxwidth": "${builder:maxwidth}",
+        "maxwidth_align": "${builder:maxwidth_align}",
+        "maxwidth_breakpoint": "${builder:maxwidth_breakpoint}",
+        "margin": "${builder:margin}",
+        "margin_remove_top": "${builder:margin_remove_top}",
+        "margin_remove_bottom": "${builder:margin_remove_bottom}",
+        "animation": "${builder:animation}",
+        "_parallax_button": "${builder:_parallax_button}",
+        "visibility": "${builder:visibility}",
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "css": {
+            "label": "CSS",
+            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
+            "type": "editor",
+            "editor": "code",
+            "mode": "css",
+            "attrs": {
+                "debounce": 500
+            }
+        }
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": [
+                        "icon",
+                        "link",
+                        "link_target"
+                    ]
+                },
+                {
+                    "title": "Settings",
+                    "fields": [
+                        {
+                            "label": "Icon",
+                            "type": "group",
+                            "divider": true,
+                            "fields": [
+                                "icon_color",
+                                "icon_ratio"
+                            ]
+                        },
+                        {
+                            "label": "Link",
+                            "type": "group",
+                            "divider": true,
+                            "fields": [
+                                "link_style"
+                            ]
+                        },
+                        {
+                            "label": "General",
+                            "type": "group",
+                            "fields": [
+                                "text_align",
+                                "text_align_breakpoint",
+                                "text_align_fallback",
+                                "maxwidth",
+                                "maxwidth_align",
+                                "maxwidth_breakpoint",
+                                "margin",
+                                "margin_remove_top",
+                                "margin_remove_bottom",
+                                "animation",
+                                "_parallax_button",
+                                "visibility"
+                            ]
+                        }
+                    ]
+                },
+                "${builder:advanced}"
+            ]
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "name": "yootheme",
+    "version": "1.19.0",
+    "title": "YOOtheme",
+    "description": "A powerful, flexible and elegant website builder that allows you to create complex pages within minutes and customize every aspect of the theme.",
+    "homepage": "https://yootheme.com",
+    "copyright": "Copyright (C) YOOtheme GmbH",
+    "license": "GNU General Public License",
+    "authors": [
+        {
+            "name": "YOOtheme",
+            "email": "info@yootheme.com",
+            "homepage": "https://yootheme.com"
+        }
+    ],
+    "scripts": {
+        "test-layouts": "phpunit -c node_modules/yootheme/phpunit.xml --testsuite \"Layouts\"",
+        "test-elements": "phpunit -c node_modules/yootheme/phpunit.xml --testsuite \"Elements\" --group=\"fuzzy\"",
+        "test-elements-pair": "phpunit -c node_modules/yootheme/phpunit.xml --testsuite \"Elements\" --group=\"pair\"",
+        "csfix-dry": "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --diff --dry-run --verbose"
+    },
+    "require": {
+        "ext-json": "*",
+        "yootheme/builder": "^1.0",
+        "yootheme/framework": "dev-develop",
+        "yootheme/styler": "^1.0",
+        "yootheme/theme-analytics": "^1.0",
+        "yootheme/theme-cookie": "^1.0",
+        "yootheme/theme-joomla-articles": "^1.0",
+        "yootheme/theme-joomla-editor": "^1.0",
+        "yootheme/theme-joomla-finder": "^1.0",
+        "yootheme/theme-joomla-menus": "^1.0",
+        "yootheme/theme-joomla-modules": "^1.0",
+        "yootheme/theme-wordpress-editor": "^1.0",
+        "yootheme/theme-wordpress-posts": "^1.0",
+        "yootheme/theme-wordpress-widgets": "^1.0",
+        "yootheme/theme-wordpress-woocommerce": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0",
+        "friendsofphp/php-cs-fixer": "^2.13"
+    },
+    "repositories": [
+        {"type": "vcs", "url": "git@github.com:yootheme/framework.git"},
+        {"type": "path", "url": "node_modules/yootheme/modules/builder"},
+        {"type": "path", "url": "node_modules/yootheme/modules/builder-joomla"},
+        {"type": "path", "url": "node_modules/yootheme/modules/builder-newsletter"},
+        {"type": "path", "url": "node_modules/yootheme/modules/builder-wordpress"},
+        {"type": "path", "url": "node_modules/yootheme/modules/styler"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-analytics"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-cookie"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-joomla-articles"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-joomla-editor"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-joomla-finder"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-joomla-menus"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-joomla-modules"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-wordpress-editor"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-wordpress-posts"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-wordpress-widgets"},
+        {"type": "path", "url": "node_modules/yootheme/modules/theme-wordpress-woocommerce"}
+    ],
+    "autoload": {
+        "psr-4": {
+            "YOOtheme\\": "vendor/yootheme/theme/src",
+            "YOOtheme\\Theme\\": [
+                "vendor/yootheme/theme/modules/settings/src",
+                "vendor/yootheme/theme/platforms/joomla/src",
+                "vendor/yootheme/theme/platforms/wordpress/src"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YOOtheme\\Tests\\": "vendor/yootheme/theme/tests"
+        }
+    },
+    "config": {
+        "process-timeout": 0,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "5.6"
+        }
+    }
+}

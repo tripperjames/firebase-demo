@@ -1,0 +1,38 @@
+{
+    "name": "yootheme/theme",
+    "version": "1.19.0",
+    "description": "YOOtheme Theme Framework",
+    "homepage": "https://yootheme.com",
+    "copyright": "Copyright (C) YOOtheme GmbH",
+    "license": "GNU General Public License",
+    "authors": [
+        {
+            "name": "YOOtheme",
+            "email": "info@yootheme.com",
+            "homepage": "https://yootheme.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "YOOtheme\\": "src",
+            "YOOtheme\\Theme\\": [
+                "modules/builder/src",
+                "modules/settings/src",
+                "modules/styler/src",
+                "platforms/joomla/src",
+                "platforms/joomla-modules/src",
+                "platforms/wordpress/src",
+                "platforms/wordpress-widgets/src"
+            ]
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.0.x-dev"
+        }
+    }
+}

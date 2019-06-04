@@ -1,0 +1,15 @@
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+	<polyline fill="none" stroke="#444" stroke-width="2" points="3,11 3,7 7,7" />
+	<path fill="none" stroke="#444" stroke-width="2" d="M16.86,13.71l-4.14-4.14c-1.14-1.14-1.14-3,0-4.28c1.14-1,2.57-1.29,4-0.14" />
+	<circle fill="#444" cx="11.43" cy="4" r="2" />
+	<path fill="none" stroke="#444" stroke-width="2" d="M16.29,9.43l4.14-4.14c1.14-1.14,3.14-1.14,4.29,0c1.14,1,1.29,2.57,0.14,4" />
+	<path fill="#444" d="M28,4c0,1.14-0.89,2-1.92,2S24,5.14,24,4c0-1,0.89-2,2.08-2C27.11,2,28,2.86,28,4z" />
+	<path fill="none" stroke="#444" stroke-width="2" d="M20.57,8.86L24.71,13c1.14,1.14,1.14,3,0,4.29c-1.14,1-2.57,1.28-4,0.14" />
+	<path fill="#444" d="M26,20.64c-1.14,0-2-0.89-2-1.93c0-1.18,0.86-2.07,2-2.07c1,0,2,0.89,2,2.07C28,19.75,27.14,20.64,26,20.64z" />
+	<path fill="none" stroke="#444" stroke-width="2" d="M21.14,13.14L17,17.29c-1.14,1.14-3,1.14-4.29,0c-1-1-1.28-2.57-0.14-4" />
+	<path fill="#444" d="M9.43,18.72c0-1.18,0.85-2.07,2-2.07c1,0,2,0.89,2,2.07c0,1.04-0.86,1.93-2,1.93 C10.29,20.64,9.43,19.75,9.43,18.72z" />
+	<line fill="none" stroke="#444" stroke-width="2" x1="3" y1="14" x2="3" y2="20" />
+	<polyline fill="none" stroke="#444" stroke-width="2" points="3,23 3,27 8,27 " />
+	<line fill="none" stroke="#444" stroke-width="2" x1="11" y1="27" x2="17" y2="27" />
+	<polyline fill="none" stroke="#444" stroke-width="2" points="25,23 25,27 20,27 " />
+</svg>

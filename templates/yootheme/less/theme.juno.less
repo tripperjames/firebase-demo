@@ -1,0 +1,90 @@
+/*
+
+Name: Juno
+Background: White
+Color: Pink
+Type: Flat
+
+Style: white-dove
+Name: White Dove
+Background: White
+Color: Blue
+Type: Flat
+
+Style: white-blue
+Name: White Blue
+Background: White
+Color: Blue
+Type: Flat
+
+Style: white-red
+Name: White Red
+Background: White
+Color: Red
+Type: Flat
+
+Style: white-green
+Name: White Green
+Background: White
+Color: Green
+Type: Flat
+
+Style: black-blue
+Name: Black Blue
+Background: Black
+Color: Blue
+Type: Flat
+
+*/
+
+// Platform
+@import "platform.less";
+
+// UIkit Core
+@import "../vendor/assets/uikit/src/less/uikit.less";
+
+// UIkit Theme
+@import "../vendor/assets/uikit-themes/master/_import.less";
+@import "../vendor/assets/uikit-themes/master-juno/_import.less";
+
+// Theme
+@import "theme.less";
+
+
+// Variables
+// ========================================================================
+
+
+//
+// Toolbar
+//
+
+@theme-toolbar-color-mode:                               dark;
+@theme-toolbar-background:                               @global-muted-background;
+
+//
+// Box Decoration
+//
+
+@theme-box-decoration-default-transform-horizontal:      -30px;
+@theme-box-decoration-default-transform-vertical:        30px;
+@theme-box-decoration-default-background:                darken(@global-muted-background, 3%);
+
+@theme-box-decoration-primary-transform-horizontal:      30px;
+@theme-box-decoration-primary-transform-vertical:        30px;
+@theme-box-decoration-primary-background:                @global-primary-background;
+
+@theme-box-decoration-secondary-transform-horizontal:    30px;
+@theme-box-decoration-secondary-transform-vertical:      -30px;
+@theme-box-decoration-secondary-background:              @global-secondary-background;
+
+@inverse-theme-box-decoration-primary-background:        @inverse-global-primary-background;
+@inverse-theme-box-decoration-secondary-background:      @inverse-global-primary-background;
+
+
+// Style
+// ========================================================================
+
+@import (optional) "../vendor/assets/uikit-themes/master-juno/styles/@{internal-style}.less";
+
+@internal-style: ;

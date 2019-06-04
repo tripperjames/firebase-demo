@@ -1,0 +1,30 @@
+{
+    "name": "subnav_item",
+    "title": "Item",
+    "width": 500,
+    "placeholder": {
+        "props": {
+            "content": "Item"
+        }
+    },
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "fields": {
+        "content": {
+            "label": "Content"
+        },
+        "link": "${builder:link}",
+        "link_target": "${builder:link_target}"
+    },
+    "fieldset": {
+        "default": {
+            "fields": [
+                "content",
+                "link",
+                "link_target"
+            ]
+        }
+    }
+}

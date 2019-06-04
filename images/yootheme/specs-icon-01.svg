@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="215" height="215" viewBox="0 0 215 215">
+    <circle opacity="0.2"  fill="none" stroke="#000" stroke-width="1.5" cx="107.5" cy="107.5" r="92.5"/>
+    <path fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" d="M116.81,91.832	c6.83,2.066,11.803,8.41,11.803,15.914c0,7.262-4.655,13.438-11.146,15.701"/>
+    <path fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" d="M124.235,84.312	c9.563,3.542,16.381,12.747,16.381,23.542c0,10.958-7.021,20.275-16.812,23.699"/>
+    <polygon fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="88.732,96.48 74.718,96.48 74.718,107.625 74.718,107.708 74.718,118.854 88.732,118.854 109.724,136.665 109.724,107.708	109.724,107.625 109.724,78.669"/>
+</svg>

@@ -1,0 +1,106 @@
+//
+// Component: Heading
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@heading-primary-font-size-m:                   @heading-primary-font-size-l * 0.92;
+
+@heading-primary-line-height:                   1.3;
+@heading-primary-font-size-l:                   64px;
+@heading-primary-line-height-l:                 1.3;
+
+@heading-hero-font-size:                        @heading-hero-font-size-l * 0.7;
+
+@heading-hero-line-height:                      1.3;
+@heading-hero-font-size-m:                      64px;
+@heading-hero-line-height-m:                    1.3;
+@heading-hero-font-size-l:                      90px;
+@heading-hero-line-height-l:                    1.3;
+
+@heading-bullet-border:                         @global-primary-background;
+
+@heading-line-border-width:                     12px;
+@heading-line-border:                           @global-primary-background;
+@heading-line-margin-horizontal:                0;
+
+//
+// Master
+//
+
+@heading-primary-letter-spacing:                -1.25px;
+@heading-hero-letter-spacing:                   -1.85px;
+
+
+// Primary
+// ========================================================================
+
+.hook-heading-primary() {}
+
+
+// Hero
+// ========================================================================
+
+.hook-heading-hero() {}
+
+
+// Divider
+// ========================================================================
+
+.hook-heading-divider() {}
+
+
+// Bullet
+// ========================================================================
+
+.hook-heading-bullet() {}
+
+
+// Line
+// ========================================================================
+
+.hook-heading-line() { display: none; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-heading-misc() {
+
+    .uk-heading-line > * {
+        display: block;
+        margin-bottom: -1.1em;
+    }
+
+    .uk-heading-line::after {
+        content: "";
+        display: inline-block;
+        width: ~'calc(10% + 3em)';
+        height: 0.3em;
+        background: @heading-line-border;
+    }
+
+}
+
+
+// Inverse
+// ========================================================================
+
+.hook-inverse-heading-primary() {}
+
+.hook-inverse-heading-hero() {}
+
+.hook-inverse-heading-divider() {}
+
+.hook-inverse-heading-bullet() {}
+
+.hook-inverse-heading-line() {}
+
+.hook-inverse() {
+
+    .uk-heading-line::after { background: @inverse-global-border; }
+
+}

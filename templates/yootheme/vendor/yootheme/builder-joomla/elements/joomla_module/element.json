@@ -1,0 +1,184 @@
+{
+    "@import": "./element.php",
+    "name": "joomla_module",
+    "title": "J! Module",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "width": 500,
+    "templates": {
+        "render": "./templates/template.php"
+    },
+    "fields": {
+        "module": {
+            "type": "select-module",
+            "label": "Module",
+            "description": "Any Joomla module can be displayed in your custom layout.",
+            "default": ""
+        },
+        "style": {
+            "type": "select",
+            "label": "Style",
+            "description": "Select one of the boxed card styles or a blank module.",
+            "default": "",
+            "options": {
+                "Blank": "",
+                "Card Default": "card-default",
+                "Card Primary": "card-primary",
+                "Card Secondary": "card-secondary",
+                "Card Hover": "card-hover"
+            }
+        },
+        "title_style": {
+            "type": "select",
+            "label": "Style",
+            "description": "Title styles differ in font-size but may also come with a predefined color, size and font.",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Primary": "heading-primary",
+                "H1": "h1",
+                "H2": "h2",
+                "H3": "h3",
+                "H4": "h4",
+                "H5": "h5",
+                "H6": "h6"
+            }
+        },
+        "title_decoration": {
+            "type": "select",
+            "label": "Decoration",
+            "description": "Decorate the title with a divider, bullet or a line that is vertically centered to the heading.",
+            "default": "",
+            "options": {
+                "None": "",
+                "Divider": "divider",
+                "Bullet": "bullet",
+                "Line": "line"
+            }
+        },
+        "title_color": {
+            "type": "select",
+            "label": "Color",
+            "description": "Select the text color. If the background option is selected, styles that don't apply a background image use the primary color instead.",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Muted": "muted",
+                "Primary": "primary",
+                "Success": "success",
+                "Warning": "warning",
+                "Danger": "danger",
+                "Background": "background"
+            }
+        },
+        "list_style": {
+            "label": "List Style",
+            "description": "Select the list style.",
+            "type": "select",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Divider": "divider"
+            },
+            "enable": "$match(type, 'articles_archive|articles_categories|articles_latest|articles_popular|tags_popular|tags_similar')"
+        },
+        "link_style": {
+            "label": "Link Style",
+            "description": "Select the link style.",
+            "type": "select",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Muted": "muted"
+            },
+            "enable": "$match(type, 'articles_archive|articles_categories|articles_latest|articles_popular|tags_popular|tags_similar')"
+        },
+        "menu_style": {
+            "label": "Style",
+            "description": "Select the menu style",
+            "type": "select",
+            "default": "nav",
+            "options": {
+                "Nav": "nav",
+                "Subnav": "subnav"
+            },
+            "enable": "$match(type, 'menu')"
+        },
+        "text_align": "${builder:text_align_justify}",
+        "text_align_breakpoint": "${builder:text_align_breakpoint}",
+        "text_align_fallback": "${builder:text_align_justify_fallback}",
+        "maxwidth": "${builder:maxwidth}",
+        "maxwidth_align": "${builder:maxwidth_align}",
+        "maxwidth_breakpoint": "${builder:maxwidth_breakpoint}",
+        "margin": "${builder:margin}",
+        "margin_remove_top": "${builder:margin_remove_top}",
+        "margin_remove_bottom": "${builder:margin_remove_bottom}",
+        "animation": "${builder:animation}",
+        "_parallax_button": "${builder:_parallax_button}",
+        "visibility": "${builder:visibility}",
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "css": {
+            "label": "CSS",
+            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-title</code>",
+            "type": "editor",
+            "editor": "code",
+            "mode": "css",
+            "attrs": {
+                "debounce": 500
+            }
+        }
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": ["module"]
+                },
+                {
+                    "title": "Settings",
+                    "fields": [
+                        {
+                            "type": "group",
+                            "label": "Panel",
+                            "divider": true,
+                            "fields": ["style"]
+                        },
+                        {
+                            "type": "group",
+                            "label": "Title",
+                            "divider": true,
+                            "fields": ["title_style", "title_decoration", "title_color"]
+                        },
+                        {
+                            "type": "group",
+                            "label": "List",
+                            "divider": true,
+                            "fields": ["list_style", "link_style"]
+                        },
+                        {
+                            "type": "group",
+                            "label": "Menu",
+                            "divider": true,
+                            "fields": ["menu_style"]
+                        },
+                        {
+                            "type": "group",
+                            "label": "General",
+                            "fields": ["text_align", "text_align_breakpoint", "text_align_fallback", "maxwidth", "maxwidth_align", "maxwidth_breakpoint", "margin", "margin_remove_top", "margin_remove_bottom", "animation", "_parallax_button", "visibility"]
+                        }
+                    ]
+                },
+                {
+                    "title": "Advanced",
+                    "fields": ["name", "status", "id", "class", "css"]
+                }
+            ]
+        }
+    }
+}

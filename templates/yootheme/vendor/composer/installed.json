@@ -1,0 +1,393 @@
+[
+    {
+        "name": "psr/http-message",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06T14:39:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "homepage": "https://github.com/php-fig/http-message",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
+        "name": "yootheme/builder",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/builder",
+            "reference": "13020bcf1204a7254fafad2a18334d11e3897615"
+        },
+        "require": {
+            "php": "^5.4",
+            "yootheme/builder-joomla": "^1.0",
+            "yootheme/builder-newsletter": "^1.0",
+            "yootheme/builder-wordpress": "^1.0"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/builder-joomla",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/builder-joomla",
+            "reference": "15290af2f92d3cf9eaed5d3af93798cbba6bd455"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Builder\\Joomla\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/builder-newsletter",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/builder-newsletter",
+            "reference": "86ebf1bf68cc38c0ffb41d539cbd1b9d6ef165ed"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Builder\\Newsletter\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/builder-wordpress",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/builder-wordpress",
+            "reference": "1405de0d6e088bdd2ec7bc72cd1291d99c88a655"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Builder\\Wordpress\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/framework",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:yootheme/framework.git",
+            "reference": "2f7b07548a13ee6268deece4df2c598e59d9e680"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yootheme/framework/zipball/2f7b07548a13ee6268deece4df2c598e59d9e680",
+            "reference": "2f7b07548a13ee6268deece4df2c598e59d9e680",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "psr/http-message": "^1.0"
+        },
+        "time": "2019-03-05T10:46:42+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-develop": "2.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\": [
+                    "src",
+                    "modules/app/src",
+                    "modules/asset/src",
+                    "modules/event/src",
+                    "modules/view/src",
+                    "platforms/common/src",
+                    "platforms/joomla/src",
+                    "platforms/wordpress/src"
+                ]
+            }
+        },
+        "license": [
+            "GNU General Public License"
+        ],
+        "authors": [
+            {
+                "name": "YOOtheme",
+                "email": "info@yootheme.com"
+            }
+        ],
+        "description": "YOOtheme Framework",
+        "homepage": "https://yootheme.com",
+        "support": {
+            "source": "https://github.com/yootheme/framework/tree/develop",
+            "issues": "https://github.com/yootheme/framework/issues"
+        }
+    },
+    {
+        "name": "yootheme/styler",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/styler",
+            "reference": "682d1f88187afb163688467bf1571d8d0e6e8fb5"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Theme\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/theme-analytics",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-analytics",
+            "reference": "150253d351e7853b87f8a7b0014771226c4f566c"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist"
+    },
+    {
+        "name": "yootheme/theme-cookie",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-cookie",
+            "reference": "a2460907a6b72f640db2d5183542ec1f24ae71ce"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist"
+    },
+    {
+        "name": "yootheme/theme-joomla-articles",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-joomla-articles",
+            "reference": "88dbd0dde55cff0914a28a3dd14ef529273f4c4a"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "description": "Joomla article editor overlay to open customizer"
+    },
+    {
+        "name": "yootheme/theme-joomla-editor",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-joomla-editor",
+            "reference": "5786c02131da38d8379f7dd44449104ef755c7e4"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "description": "Joomla visual editor for customizer (JCE, TinyMCE, ...)"
+    },
+    {
+        "name": "yootheme/theme-joomla-finder",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-joomla-finder",
+            "reference": "3d4a0c468769bc5d4d9c77e63a253c7f638447db"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "description": "Joomla Finder module for customizer"
+    },
+    {
+        "name": "yootheme/theme-joomla-menus",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-joomla-menus",
+            "reference": "624737efd375fdaa04c9169a4dcd6f7973181010"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist"
+    },
+    {
+        "name": "yootheme/theme-joomla-modules",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-joomla-modules",
+            "reference": "68191a55f54987161e9d68c64d8b225ccf2efc80"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Theme\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/theme-wordpress-editor",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-wordpress-editor",
+            "reference": "7aed26bf6e04a2e3d346f5410670e61c320c4296"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "description": "Wordpress visual editor for customizer"
+    },
+    {
+        "name": "yootheme/theme-wordpress-posts",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-wordpress-posts",
+            "reference": "9219c1d9122d57ba7b30251a73db35aa0da39fb9"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist"
+    },
+    {
+        "name": "yootheme/theme-wordpress-widgets",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-wordpress-widgets",
+            "reference": "7953244cf8280f7f554c28caa9eac18291f9a9e5"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YOOtheme\\Theme\\": "src"
+            }
+        }
+    },
+    {
+        "name": "yootheme/theme-wordpress-woocommerce",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "path",
+            "url": "node_modules/yootheme/modules/theme-wordpress-woocommerce",
+            "reference": "97a048d443d06cff521ae3583d731f8e4ca87cd7"
+        },
+        "require": {
+            "php": "^5.4"
+        },
+        "type": "library",
+        "installation-source": "dist"
+    }
+]

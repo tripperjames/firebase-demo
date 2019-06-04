@@ -1,0 +1,12 @@
+{
+    "- Select -": "-vybrať-",
+    "- Select Module -": "-vybrať modul-",
+    "- Select Position -": "-vybrať pozíciu-",
+    "\"%name%\" already exists in library, it will be overwritten when saving.": "\"%name%\" už existuje v knižnici, bude prepísaný po uložení.",
+    "%label% Position": "%label% pozícia",
+    "About": "O nás",
+    "Add": "Pridať",
+    "Add Element": "Pridať element",
+    "Add Folder": "Pridať priečinok",
+    "Add Item": "Pridať položku"
+}

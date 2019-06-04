@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" method="upgrade" client="site">
+    <name>Builder</name>
+    <version>1.19.0</version>
+    <description>This module allows you to create content using the YOOtheme Builder.</description>
+    <creationDate>March 2019</creationDate>
+    <copyright>Copyright (C) YOOtheme GmbH</copyright>
+    <license>GNU General Public License</license>
+    <author>YOOtheme</author>
+    <authorEmail>info@yootheme.com</authorEmail>
+    <authorUrl>https://yootheme.com</authorUrl>
+    <files>
+        <filename module="mod_yootheme_builder">mod_yootheme_builder.php</filename>
+        <folder>elements</folder>
+    </files>
+    <config>
+        <fields name="params" >
+            <fieldset name="basic" addfieldpath="/modules/mod_yootheme_builder/elements">
+                <field name="button" type="button" label="Button" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

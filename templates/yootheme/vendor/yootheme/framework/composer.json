@@ -1,0 +1,36 @@
+{
+    "name": "yootheme/framework",
+    "description": "YOOtheme Framework",
+    "homepage": "https://yootheme.com",
+    "copyright": "Copyright (C) YOOtheme GmbH",
+    "license": "GNU General Public License",
+    "authors": [
+        {
+            "name": "YOOtheme",
+            "email": "info@yootheme.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "psr/http-message": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YOOtheme\\": [
+                "src",
+                "modules/app/src",
+                "modules/asset/src",
+                "modules/event/src",
+                "modules/view/src",
+                "platforms/common/src",
+                "platforms/joomla/src",
+                "platforms/wordpress/src"
+            ]
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "2.0.x-dev"
+        }
+    }
+}

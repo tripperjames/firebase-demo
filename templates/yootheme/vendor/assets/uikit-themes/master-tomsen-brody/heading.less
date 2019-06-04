@@ -1,0 +1,89 @@
+//
+// Component: Heading
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@heading-primary-font-size-l:                   75px;
+@heading-primary-line-height-l:                 0.85;
+
+@heading-primary-font-size-m:                   @heading-primary-font-size-l * 0.86; // 65px
+
+@heading-primary-font-size:                     @heading-primary-font-size-l * 0.74; // 56px
+@heading-primary-line-height:                   0.9;
+
+@heading-hero-font-size-l:                      120px;
+@heading-hero-line-height-l:                    0.8;
+
+@heading-hero-font-size-m:                      @heading-hero-font-size-l * 0.833; // 100px
+@heading-hero-line-height-m:                    0.8;
+
+@heading-hero-font-size:                        @heading-hero-font-size-l * 0.625; // 75px
+@heading-hero-line-height:                      0.9;
+
+@heading-divider-padding-bottom:                0.07em;
+@heading-divider-border-width:                  0.12em;
+@heading-divider-border:                        @global-emphasis-color;
+
+@heading-bullet-border:                         @global-primary-background;
+
+@heading-line-width:                            45px;
+@heading-line-border-width:                     2px;
+@heading-line-border:                           @global-secondary-background;
+
+
+// Primary
+// ========================================================================
+
+.hook-heading-primary() {}
+
+
+// Hero
+// ========================================================================
+
+.hook-heading-hero() {}
+
+
+// Divider
+// ========================================================================
+
+.hook-heading-divider() {}
+
+
+// Bullet
+// ========================================================================
+
+.hook-heading-bullet() {}
+
+
+// Line
+// ========================================================================
+
+.hook-heading-line() {}
+
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-heading-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-heading-divider-border:                  @inverse-global-emphasis-color;
+@inverse-heading-line-border:                     @inverse-global-emphasis-color;
+
+.hook-inverse-heading-primary() {}
+
+.hook-inverse-heading-hero() {}
+
+.hook-inverse-heading-divider() {}
+
+.hook-inverse-heading-bullet() {}
+
+.hook-inverse-heading-line() {}

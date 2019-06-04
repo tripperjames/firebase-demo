@@ -1,0 +1,174 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,400,300';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:600';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+
+//
+// No conflict mode
+//
+
+body { margin: 0; }
+
+.uk-noconflict {
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: @base-body-font-family;
+    font-size: @base-body-font-size;
+    font-weight: @base-body-font-weight;
+    line-height: @base-body-line-height;
+    -webkit-text-size-adjust: 100%;
+    background: @base-body-background;
+    color: @base-body-color;
+    .hook-base-body;
+
+    //
+    // Needed for Joomla
+    //
+
+    label { display: inline-block; }
+
+    //
+    // Import components
+    //
+
+    @import "../../../../../../assets/uikit/src/less/uikit.less";
+
+    //
+    // Import theme
+    //
+
+    @import "../../../../assets/less/uikit/_import.less";
+
+    //
+    // Variables
+    //
+
+    @breakpoint-xlarge:                             1400px;
+
+    @global-z-index:                                600000;
+
+    @internal-form-select-image:                    "../../../../../yootheme/theme/assets/less/uikit/images/form-select.svg";
+
+    //
+    // Import website builder
+    //
+
+    @import "../../../../assets/less/admin/_import.less";
+
+    /* Joomla
+    ========================================================================== */
+
+    /*
+     * TinyMCE Skin
+     */
+
+    .mce-tinymce { border-color: #e5e5e5; }
+
+    .mce-panel { background: #fff; }
+
+    .mce-toolbar-grp {
+        padding-left: 2px;
+        padding-bottom: 4px;
+        background: #fafafa;
+    }
+
+    .mce-btn-group:not(:first-child) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .mce-btn { background: transparent; }
+
+    .mce-btn:hover,
+    .mce-btn:focus { background-color: #f0f0f0; }
+
+    .mce-btn-small button { padding: 2px 5px; }
+
+    .mce-ico { height: 20px; }
+
+    .mce-edit-area { border-color: #e5e5e5; }
+
+    .mce-statusbar { border-top: 1px solid #e5e5e5; }
+
+    /*
+     * Icon font
+     */
+
+    @font-face {
+        font-family: 'IcoMoon';
+        src: url('../../../../../../../../../media/jui/fonts/IcoMoon.eot');
+        src: url('../../../../../../../../../media/jui/fonts/IcoMoon.eot?#iefix') format('embedded-opentype'), url('../../../../../../../../../media/jui/fonts/IcoMoon.woff') format('woff'), url('../../../../../../../../../media/jui/fonts/IcoMoon.ttf') format('truetype'), url('../../../../../../../../../media/jui/fonts/IcoMoon.svg#IcoMoon') format('svg');
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-family: 'IcoMoon';
+    }
+
+    .icon-address:before { content: "\70"; }
+    .icon-share-alt:before { content: "\26"; }
+    .icon-file-add:before { content: "\29"; }
+    .icon-pictures:before { content: "\30"; }
+
+}
+
+/*
+ * Hide Debug + System Messages
+ */
+
+#system-debug,
+#system-message-container { display: none; }
+
+@z-index: 600000;
+
+/*
+ * TinyMCE
+ */
+
+.mce-menu-item:hover .mce-text,
+.mce-menu-item.mce-selected .mce-text,
+.mce-menu-item.mce-active .mce-text,
+.mce-menu-item:focus .mce-text { color: #fff !important; }
+
+#mce-modal-block { z-index: @z-index + 10 !important; } // Modal
+.mce-window { z-index: @z-index + 10 + 1 !important; } // Modal dialog
+
+.mce-inline-toolbar-grp, // Link picker
+.mce-floatpanel { z-index: @z-index + 10 + 2 !important; } // Color picker
+
+.mce-tooltip { z-index: @z-index + 10 + 3 !important; } // Tooltip
+
+.mce-notification { // Notification
+    width: 500px;
+    box-sizing: border-box;
+    z-index: @z-index + 10 + 3 !important;
+}
+
+/*
+ * JCE
+ */
+
+// Hide "Code" and "Preview" tabs of JCE inside customizer
+.yo-customizer .wf-editor-header { display: none; }
+
+.mceListBoxMenu { z-index: @z-index + 10 !important; }
+
+.mceModal,
+.mceDropDown,
+.mce_anchor,
+.mceSplitButtonMenu,
+.mce_forecolor,
+.mce_backcolor { z-index: @z-index + 10 + 1 !important; }
+
+.mceModalOverlay { z-index: @z-index + 10 + 2 !important; }
+
+.mceModalBody { z-index: @z-index + 10 + 3 !important; }
+
+//
+// Import codemirror
+//
+
+@import (inline) '../../../../../../../node_modules/codemirror/lib/codemirror.css';
+@import (inline) '../../../../../../../node_modules/codemirror/addon/hint/show-hint.css';
+
+.CodeMirror-hints { z-index: 100000000000000; }

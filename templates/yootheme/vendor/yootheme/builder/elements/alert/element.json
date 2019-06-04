@@ -1,0 +1,110 @@
+{
+    "name": "alert",
+    "title": "Alert",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "width": 500,
+    "placeholder": {
+        "props": {
+            "title": "",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    },
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "fields": {
+        "title": {
+            "label": "Title"
+        },
+        "content": {
+            "label": "Content",
+            "type": "editor"
+        },
+        "alert_style": {
+            "label": "Style",
+            "type": "select",
+            "default": "",
+            "options": {
+                "Default": "",
+                "Primary": "primary",
+                "Success": "success",
+                "Warning": "warning",
+                "Danger": "danger"
+            }
+        },
+        "alert_size": {
+            "type": "checkbox",
+            "text": "Larger padding"
+        },
+        "maxwidth": "${builder:maxwidth}",
+        "maxwidth_align": "${builder:maxwidth_align}",
+        "maxwidth_breakpoint": "${builder:maxwidth_breakpoint}",
+        "margin": "${builder:margin}",
+        "margin_remove_top": "${builder:margin_remove_top}",
+        "margin_remove_bottom": "${builder:margin_remove_bottom}",
+        "animation": "${builder:animation}",
+        "_parallax_button": "${builder:_parallax_button}",
+        "visibility": "${builder:visibility}",
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "css": {
+            "label": "CSS",
+            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-title</code>, <code>.el-content</code>",
+            "type": "editor",
+            "editor": "code",
+            "mode": "css",
+            "attrs": {
+                "debounce": 500
+            }
+        }
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": [
+                        "title",
+                        "content"
+                    ]
+                },
+                {
+                    "title": "Settings",
+                    "fields": [
+                        {
+                            "label": "Alert",
+                            "type": "group",
+                            "divider": true,
+                            "fields": [
+                                "alert_style",
+                                "alert_size"
+                            ]
+                        },
+                        {
+                            "label": "General",
+                            "type": "group",
+                            "fields": [
+                                "maxwidth",
+                                "maxwidth_align",
+                                "maxwidth_breakpoint",
+                                "margin",
+                                "margin_remove_top",
+                                "margin_remove_bottom",
+                                "animation",
+                                "_parallax_button",
+                                "visibility"
+                            ]
+                        }
+                    ]
+                },
+                "${builder:advanced}"
+            ]
+        }
+    }
+}
